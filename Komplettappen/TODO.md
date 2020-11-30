@@ -13,9 +13,11 @@
 - Rubrik/beskrivning
 
 
-Lista TODO -> Login
+Lista TODO -> Login -> Signup
                     -> TODO detail
                     -> Bjud in
 
 
-
+Bjud in:
+Varje lista har kod typ: 12a 45b
+Listägaren godkänner

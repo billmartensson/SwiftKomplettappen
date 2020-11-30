@@ -18,7 +18,7 @@ struct KomplettappenApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoListView()
         }
     }
 }

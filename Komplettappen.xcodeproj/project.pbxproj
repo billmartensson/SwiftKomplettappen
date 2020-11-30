@@ -3,28 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9550BC78784C90717AA6558F /* Pods_Komplettappen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFB65F52BC18D0CFAAB894C /* Pods_Komplettappen.framework */; };
 		AB475B35256FCE0F0024FE0F /* KomplettappenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */; };
-		AB475B37256FCE0F0024FE0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB475B36256FCE0F0024FE0F /* ContentView.swift */; };
 		AB475B39256FCE100024FE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB475B38256FCE100024FE0F /* Assets.xcassets */; };
 		AB475B3C256FCE100024FE0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB475B3B256FCE100024FE0F /* Preview Assets.xcassets */; };
 		AB475BAE257512580024FE0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB475BAD257512580024FE0F /* GoogleService-Info.plist */; };
+		AB9ECF83257514D4000C7D87 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF82257514D4000C7D87 /* TodoListView.swift */; };
+		AB9ECF862575157F000C7D87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF852575157F000C7D87 /* LoginView.swift */; };
+		AB9ECF892575165E000C7D87 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF882575165E000C7D87 /* SignupView.swift */; };
+		AB9ECF8C2575171E000C7D87 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF8B2575171E000C7D87 /* TodoDetailView.swift */; };
+		AB9ECF8F25751808000C7D87 /* InviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF8E25751808000C7D87 /* InviteView.swift */; };
+		AB9ECF9225751B30000C7D87 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF9125751B30000C7D87 /* SelectListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28C030D2A1830107AA73D353 /* Pods-Komplettappen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Komplettappen.debug.xcconfig"; path = "Target Support Files/Pods-Komplettappen/Pods-Komplettappen.debug.xcconfig"; sourceTree = "<group>"; };
 		AB475B31256FCE0F0024FE0F /* Komplettappen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Komplettappen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomplettappenApp.swift; sourceTree = "<group>"; };
-		AB475B36256FCE0F0024FE0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB475B38256FCE100024FE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB475B3B256FCE100024FE0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB475B3D256FCE100024FE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB475B44256FCE5B0024FE0F /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		AB475BAD257512580024FE0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB9ECF82257514D4000C7D87 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		AB9ECF852575157F000C7D87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB9ECF882575165E000C7D87 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		AB9ECF8B2575171E000C7D87 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		AB9ECF8E25751808000C7D87 /* InviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteView.swift; sourceTree = "<group>"; };
+		AB9ECF9125751B30000C7D87 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 		EED491A3753447F4279152F6 /* Pods-Komplettappen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Komplettappen.release.xcconfig"; path = "Target Support Files/Pods-Komplettappen/Pods-Komplettappen.release.xcconfig"; sourceTree = "<group>"; };
 		FDFB65F52BC18D0CFAAB894C /* Pods_Komplettappen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Komplettappen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,12 +80,14 @@
 		AB475B33256FCE0F0024FE0F /* Komplettappen */ = {
 			isa = PBXGroup;
 			children = (
-				AB475BAD257512580024FE0F /* GoogleService-Info.plist */,
 				AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */,
-				AB475B36256FCE0F0024FE0F /* ContentView.swift */,
+				AB9ECF9725751FD8000C7D87 /* Todolist */,
+				AB9ECF9625751FBB000C7D87 /* Invite */,
+				AB9ECF9525751F8F000C7D87 /* LoginSignup */,
 				AB475B44256FCE5B0024FE0F /* TODO.md */,
 				AB475B38256FCE100024FE0F /* Assets.xcassets */,
 				AB475B3D256FCE100024FE0F /* Info.plist */,
+				AB475BAD257512580024FE0F /* GoogleService-Info.plist */,
 				AB475B3A256FCE100024FE0F /* Preview Content */,
 			);
 			path = Komplettappen;
@@ -89,13 +101,39 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AB9ECF9525751F8F000C7D87 /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				AB9ECF852575157F000C7D87 /* LoginView.swift */,
+				AB9ECF882575165E000C7D87 /* SignupView.swift */,
+			);
+			path = LoginSignup;
+			sourceTree = "<group>";
+		};
+		AB9ECF9625751FBB000C7D87 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				AB9ECF8E25751808000C7D87 /* InviteView.swift */,
+			);
+			path = Invite;
+			sourceTree = "<group>";
+		};
+		AB9ECF9725751FD8000C7D87 /* Todolist */ = {
+			isa = PBXGroup;
+			children = (
+				AB9ECF82257514D4000C7D87 /* TodoListView.swift */,
+				AB9ECF8B2575171E000C7D87 /* TodoDetailView.swift */,
+				AB9ECF9125751B30000C7D87 /* SelectListView.swift */,
+			);
+			path = Todolist;
+			sourceTree = "<group>";
+		};
 		C797264A131FBCA1123FF433 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				28C030D2A1830107AA73D353 /* Pods-Komplettappen.debug.xcconfig */,
 				EED491A3753447F4279152F6 /* Pods-Komplettappen.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,8 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB475B37256FCE0F0024FE0F /* ContentView.swift in Sources */,
+				AB9ECF8C2575171E000C7D87 /* TodoDetailView.swift in Sources */,
 				AB475B35256FCE0F0024FE0F /* KomplettappenApp.swift in Sources */,
+				AB9ECF862575157F000C7D87 /* LoginView.swift in Sources */,
+				AB9ECF83257514D4000C7D87 /* TodoListView.swift in Sources */,
+				AB9ECF8F25751808000C7D87 /* InviteView.swift in Sources */,
+				AB9ECF9225751B30000C7D87 /* SelectListView.swift in Sources */,
+				AB9ECF892575165E000C7D87 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
