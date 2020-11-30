@@ -20,6 +20,7 @@
 		AB475B38256FCE100024FE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB475B3B256FCE100024FE0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB475B3D256FCE100024FE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB475B44256FCE5B0024FE0F /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 			children = (
 				AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */,
 				AB475B36256FCE0F0024FE0F /* ContentView.swift */,
+				AB475B44256FCE5B0024FE0F /* TODO.md */,
 				AB475B38256FCE100024FE0F /* Assets.xcassets */,
 				AB475B3D256FCE100024FE0F /* Info.plist */,
 				AB475B3A256FCE100024FE0F /* Preview Content */,
