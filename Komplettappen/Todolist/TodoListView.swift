@@ -10,6 +10,8 @@ import Firebase
 
 struct TodoListView: View {
     
+    @ObservedObject var todolistVM = TodoListViewModel()
+    
     @State var goLogin = false
     @State var goSelectList = false
     

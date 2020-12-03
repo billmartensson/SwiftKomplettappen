@@ -9,6 +9,10 @@ import SwiftUI
 
 struct SelectListView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @ObservedObject var selectListVM = SelectListViewModel()
+    
     @State var listname = ""
     
     var body: some View {
@@ -16,7 +20,6 @@ struct SelectListView: View {
             Text("SELECT LIST")
             
             TextField("List name", text: $listname)
-            
             
             Button(action: {
                 
@@ -27,12 +30,16 @@ struct SelectListView: View {
                 Text("Add")
             }
             
-            List {
-                Text("My list 1")
-                Text("My list 2")
-                Text("My list 3")
+            List(selectListVM.todolists) { todolist in
+                Text(todolist.listtitle).onTapGesture {
+                    UserDefaults.standard.setValue(todolist.id, forKey: "currentListId")
+                    
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
 
+        }.onAppear() {
+            selectListVM.loadLists()
         }
     }
 }

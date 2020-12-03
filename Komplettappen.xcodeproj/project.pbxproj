@@ -13,6 +13,8 @@
 		AB475B3C256FCE100024FE0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB475B3B256FCE100024FE0F /* Preview Assets.xcassets */; };
 		AB475BAE257512580024FE0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB475BAD257512580024FE0F /* GoogleService-Info.plist */; };
 		AB514C0B2578EFBD006900EF /* TODOList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C0A2578EFBD006900EF /* TODOList.swift */; };
+		AB514C0E2579077B006900EF /* SelectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C0D2579077B006900EF /* SelectListViewModel.swift */; };
+		AB514C1125791067006900EF /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C1025791067006900EF /* TodoListViewModel.swift */; };
 		AB9ECF83257514D4000C7D87 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF82257514D4000C7D87 /* TodoListView.swift */; };
 		AB9ECF862575157F000C7D87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF852575157F000C7D87 /* LoginView.swift */; };
 		AB9ECF892575165E000C7D87 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF882575165E000C7D87 /* SignupView.swift */; };
@@ -31,6 +33,8 @@
 		AB475B44256FCE5B0024FE0F /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		AB475BAD257512580024FE0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB514C0A2578EFBD006900EF /* TODOList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOList.swift; sourceTree = "<group>"; };
+		AB514C0D2579077B006900EF /* SelectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListViewModel.swift; sourceTree = "<group>"; };
+		AB514C1025791067006900EF /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		AB9ECF82257514D4000C7D87 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		AB9ECF852575157F000C7D87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AB9ECF882575165E000C7D87 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -82,11 +86,14 @@
 		AB475B33256FCE0F0024FE0F /* Komplettappen */ = {
 			isa = PBXGroup;
 			children = (
-				AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */,
+				AB514C1525791124006900EF /* Models */,
+				AB514C1425791100006900EF /* ListDetail */,
+				AB514C13257910C2006900EF /* SelectList */,
 				AB9ECF9725751FD8000C7D87 /* Todolist */,
 				AB9ECF9625751FBB000C7D87 /* Invite */,
 				AB9ECF9525751F8F000C7D87 /* LoginSignup */,
 				AB475B44256FCE5B0024FE0F /* TODO.md */,
+				AB475B34256FCE0F0024FE0F /* KomplettappenApp.swift */,
 				AB475B38256FCE100024FE0F /* Assets.xcassets */,
 				AB475B3D256FCE100024FE0F /* Info.plist */,
 				AB475BAD257512580024FE0F /* GoogleService-Info.plist */,
@@ -101,6 +108,31 @@
 				AB475B3B256FCE100024FE0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB514C13257910C2006900EF /* SelectList */ = {
+			isa = PBXGroup;
+			children = (
+				AB9ECF9125751B30000C7D87 /* SelectListView.swift */,
+				AB514C0D2579077B006900EF /* SelectListViewModel.swift */,
+			);
+			path = SelectList;
+			sourceTree = "<group>";
+		};
+		AB514C1425791100006900EF /* ListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AB9ECF8B2575171E000C7D87 /* TodoDetailView.swift */,
+			);
+			path = ListDetail;
+			sourceTree = "<group>";
+		};
+		AB514C1525791124006900EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB514C0A2578EFBD006900EF /* TODOList.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AB9ECF9525751F8F000C7D87 /* LoginSignup */ = {
@@ -124,9 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9ECF82257514D4000C7D87 /* TodoListView.swift */,
-				AB9ECF8B2575171E000C7D87 /* TodoDetailView.swift */,
-				AB9ECF9125751B30000C7D87 /* SelectListView.swift */,
-				AB514C0A2578EFBD006900EF /* TODOList.swift */,
+				AB514C1025791067006900EF /* TodoListViewModel.swift */,
 			);
 			path = Todolist;
 			sourceTree = "<group>";
@@ -255,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9ECF8C2575171E000C7D87 /* TodoDetailView.swift in Sources */,
+				AB514C0E2579077B006900EF /* SelectListViewModel.swift in Sources */,
 				AB475B35256FCE0F0024FE0F /* KomplettappenApp.swift in Sources */,
 				AB9ECF862575157F000C7D87 /* LoginView.swift in Sources */,
+				AB514C1125791067006900EF /* TodoListViewModel.swift in Sources */,
 				AB514C0B2578EFBD006900EF /* TODOList.swift in Sources */,
 				AB9ECF83257514D4000C7D87 /* TodoListView.swift in Sources */,
 				AB9ECF8F25751808000C7D87 /* InviteView.swift in Sources */,

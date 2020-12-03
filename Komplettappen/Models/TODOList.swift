@@ -8,9 +8,9 @@
 import Foundation
 import Firebase
 
-struct TODOList
+struct TODOList : Identifiable
 {
-    var firebaseid = ""
+    var id = ""
     var invitecode = ""
     var owner = ""
     var listtitle : String
