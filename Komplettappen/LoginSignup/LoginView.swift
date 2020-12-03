@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -16,7 +19,9 @@ struct LoginView: View {
                 
                 TextField("Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 
-                Button(action: {}) {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
                     Text("Login")
                 }.padding()
                 
