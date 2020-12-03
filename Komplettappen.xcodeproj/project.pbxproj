@@ -15,6 +15,7 @@
 		AB514C0B2578EFBD006900EF /* TODOList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C0A2578EFBD006900EF /* TODOList.swift */; };
 		AB514C0E2579077B006900EF /* SelectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C0D2579077B006900EF /* SelectListViewModel.swift */; };
 		AB514C1125791067006900EF /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB514C1025791067006900EF /* TodoListViewModel.swift */; };
+		AB844C1325791DFB0033CA0D /* TODOItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB844C1225791DFB0033CA0D /* TODOItem.swift */; };
 		AB9ECF83257514D4000C7D87 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF82257514D4000C7D87 /* TodoListView.swift */; };
 		AB9ECF862575157F000C7D87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF852575157F000C7D87 /* LoginView.swift */; };
 		AB9ECF892575165E000C7D87 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ECF882575165E000C7D87 /* SignupView.swift */; };
@@ -35,6 +36,7 @@
 		AB514C0A2578EFBD006900EF /* TODOList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOList.swift; sourceTree = "<group>"; };
 		AB514C0D2579077B006900EF /* SelectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListViewModel.swift; sourceTree = "<group>"; };
 		AB514C1025791067006900EF /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		AB844C1225791DFB0033CA0D /* TODOItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOItem.swift; sourceTree = "<group>"; };
 		AB9ECF82257514D4000C7D87 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		AB9ECF852575157F000C7D87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AB9ECF882575165E000C7D87 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AB514C0A2578EFBD006900EF /* TODOList.swift */,
+				AB844C1225791DFB0033CA0D /* TODOItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				AB9ECF8F25751808000C7D87 /* InviteView.swift in Sources */,
 				AB9ECF9225751B30000C7D87 /* SelectListView.swift in Sources */,
 				AB9ECF892575165E000C7D87 /* SignupView.swift in Sources */,
+				AB844C1325791DFB0033CA0D /* TODOItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@ struct TODOList : Identifiable
     var owner = ""
     var listtitle : String
     
+    var items = [TODOItem]()
+    
     func save()
     {
         var ref: DatabaseReference!
@@ -25,5 +27,15 @@ struct TODOList : Identifiable
         var listsavedata = ["invitecode": "xyz123", "owner": Auth.auth().currentUser!.uid, "title": listtitle]
         
         ref.child("komplettappen").child("lists").childByAutoId().setValue(listsavedata)
+    }
+    
+    func addItem(itemname : String)
+    {
+        
+    }
+    
+    func loadItems()
+    {
+        
     }
 }

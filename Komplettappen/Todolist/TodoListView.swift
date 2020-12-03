@@ -15,10 +15,12 @@ struct TodoListView: View {
     @State var goLogin = false
     @State var goSelectList = false
     
+    @State var itemName = ""
+    
     var body: some View {
         NavigationView {
             VStack {
-                Text("TODO")
+                Text(todolistVM.currentList.listtitle)
                 
                 /*
                 NavigationLink(
@@ -29,15 +31,23 @@ struct TodoListView: View {
                     })
                 */
                 NavigationLink(
-                    destination: LoginView(),
+                    destination: SelectListView(),
                     label: {
-                        Text("LOGIN")
+                        Text("Välj lista")
                     })
                 
-                List {
-                    Text("Sak 1")
-                    Text("Sak 2")
-                    Text("Sak 3")
+                HStack {
+                    TextField("", text: $itemName).padding()
+                    Button(action: {
+                        todolistVM.addItem(itemname: itemName)
+                    }) {
+                        Text("Add")
+                    }.padding()
+                }
+                
+                
+                List(todolistVM.currentList.items) { todoitem in
+                    Text(todoitem.itemname)
                 }
             }.fullScreenCover(isPresented: $goLogin, content: {
                 LoginView()
@@ -60,6 +70,8 @@ struct TodoListView: View {
                     goSelectList = true
                 } else {
                     goSelectList = false
+                    
+                    todolistVM.loadList()
                 }
                 
             }
