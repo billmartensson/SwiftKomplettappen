@@ -11,6 +11,7 @@ import Firebase
 struct TodoListView: View {
     
     @State var goLogin = false
+    @State var goSelectList = false
     
     var body: some View {
         NavigationView {
@@ -39,6 +40,9 @@ struct TodoListView: View {
             }.fullScreenCover(isPresented: $goLogin, content: {
                 LoginView()
             })
+            .fullScreenCover(isPresented: $goSelectList, content: {
+                SelectListView()
+            })
         }.onAppear() {
             
             if(Auth.auth().currentUser == nil)
@@ -46,6 +50,16 @@ struct TodoListView: View {
                 goLogin = true
             } else {
                 goLogin = false
+                
+                var currentListId = UserDefaults.standard.string(forKey: "currentListId")
+                
+                if(currentListId == nil)
+                {
+                    goSelectList = true
+                } else {
+                    goSelectList = false
+                }
+                
             }
             
         }

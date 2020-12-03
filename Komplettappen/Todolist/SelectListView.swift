@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct SelectListView: View {
+    
+    @State var listname = ""
+    
     var body: some View {
         VStack {
             Text("SELECT LIST")
             
-            TextField("List name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("List name", text: $listname)
             
             
-            Button(action: {}) {
+            Button(action: {
+                
+                var newTODO = TODOList(listtitle: listname)
+                
+                newTODO.save()
+            }) {
                 Text("Add")
             }
             
