@@ -40,12 +40,14 @@ struct TodoListView: View {
                 LoginView()
             })
         }.onAppear() {
+            
             if(Auth.auth().currentUser == nil)
             {
                 goLogin = true
             } else {
                 goLogin = false
             }
+            
         }
         
     }

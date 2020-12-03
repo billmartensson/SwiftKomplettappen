@@ -6,21 +6,44 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode
 
+    @State var enteredEmail = ""
+    @State var enteredPassword = ""
+    
+    @State var showError = false
     
     var body: some View {
         NavigationView {
             VStack {
                 Text("LOGIN")
-                TextField("E-mail", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 
-                TextField("Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                if(showError)
+                {
+                    Text("Felaktig inloggning")
+                        .padding()
+                        .background(Color.red)
+                }
+                
+                
+                TextField("E-mail", text: $enteredEmail).padding()
+                
+                TextField("Password", text: $enteredPassword).padding()
                 
                 Button(action: {
-                    presentationMode.wrappedValue.dismiss()
+                    Auth.auth().signIn(withEmail: enteredEmail, password: enteredPassword, completion: { loginresult, loginerror in
+                        if(loginerror == nil)
+                        {
+                            presentationMode.wrappedValue.dismiss()
+                        } else {
+                            // TODO: Visa felmeddelande
+                            showError = true
+                        }
+                    })
+                    
                 }) {
                     Text("Login")
                 }.padding()
@@ -31,6 +54,7 @@ struct LoginView: View {
                         Text("SIGNUP")
                     })
                 
+                Spacer()
 
             }
         }

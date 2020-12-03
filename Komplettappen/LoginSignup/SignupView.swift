@@ -6,20 +6,42 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignupView: View {
+    
+    @State var enteredEmail = ""
+    @State var enteredPassword = ""
+    
+    
     var body: some View {
         VStack {
             Text("SIGNUP")
             
-            TextField("E-mail", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            // TODO: Email fält
+            TextField("E-mail", text: $enteredEmail).padding()
             
+            // TODO: Lösenordsfält
+            TextField("Password", text: $enteredPassword).padding()
             
-            TextField("Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-            
-            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                Auth.auth().createUser(withEmail: enteredEmail, password: enteredPassword, completion: { signupresult, signuperror in
+                    if(signuperror == nil)
+                    {
+                        //TODO: Gå till start
+                        // OK SIGNUP
+                        print("OK SIGNUP")
+                    } else {
+                        //TODO: Visa felmeddelande
+                        // FAIL SIGNUP
+                        print("FAIL SIGNUP")
+                    }
+                })
+            }) {
                 Text("Signup")
-            }
+            }.padding()
+            
+            Spacer()
         }
     }
 }
