@@ -18,8 +18,8 @@ class SelectListViewModel : ObservableObject
 
         ref = Database.database().reference()
         
-        // TODO: Hämta bara användarens listor
-        ref.child("komplettappen").child("lists").observeSingleEvent(of: .value, with: { snapshot in
+        // TODO: Hämta listor inbjuden till
+        ref.child("komplettappen").child("lists").queryOrdered(byChild: "owner").queryEqual(toValue: Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with: { snapshot in
             
             var tempTodoArray = [TODOList]()
             for snapchild in snapshot.children

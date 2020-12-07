@@ -39,7 +39,6 @@ struct LoginView: View {
                         {
                             presentationMode.wrappedValue.dismiss()
                         } else {
-                            // TODO: Visa felmeddelande
                             showError = true
                         }
                     })

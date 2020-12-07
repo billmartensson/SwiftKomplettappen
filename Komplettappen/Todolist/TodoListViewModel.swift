@@ -22,7 +22,6 @@ class TodoListViewModel : ObservableObject
 
         ref = Database.database().reference()
         
-        // TODO: Hämta bara användarens listor
         ref.child("komplettappen").child("lists").child(savedList).observeSingleEvent(of: .value, with: { snapshot in
             
             
@@ -73,13 +72,21 @@ class TodoListViewModel : ObservableObject
         })
     }
     
+    
+    /**
+            Lägg till sak i listan
+     
+     - parameters:
+         - itemname: Namn på nya sak i listan
+     
+     */
     func addItem(itemname : String)
     {
         var tempItem = TODOItem()
         tempItem.todolistid = currentList.id
         tempItem.itemname = itemname
         
-        tempItem.save()
+        tempItem.save() 
         
         loadListItems()
     }

@@ -47,7 +47,16 @@ struct TodoListView: View {
                 
                 
                 List(todolistVM.currentList.items) { todoitem in
-                    Text(todoitem.itemname)
+                    
+                    NavigationLink(
+                        destination: TodoDetailView(currentItem: todoitem, letsLoadList: {
+                            todolistVM.loadList()
+                        }),
+                        label: {
+                            Text(todoitem.itemname)
+                        })
+                    
+                    
                 }
             }.fullScreenCover(isPresented: $goLogin, content: {
                 LoginView()
