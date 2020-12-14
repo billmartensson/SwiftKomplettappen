@@ -15,6 +15,8 @@ struct SelectListView: View {
     
     @State var listname = ""
     
+    var doneSelectingList = {}
+    
     var body: some View {
         VStack {
             Text("SELECT LIST")
@@ -26,6 +28,7 @@ struct SelectListView: View {
                 var newTODO = TODOList(listtitle: listname)
                 
                 newTODO.save()
+                selectListVM.loadLists()
             }) {
                 Text("Add")
             }
@@ -33,6 +36,8 @@ struct SelectListView: View {
             List(selectListVM.todolists) { todolist in
                 Text(todolist.listtitle).onTapGesture {
                     UserDefaults.standard.setValue(todolist.id, forKey: "currentListId")
+                    
+                    doneSelectingList()
                     
                     presentationMode.wrappedValue.dismiss()
                 }

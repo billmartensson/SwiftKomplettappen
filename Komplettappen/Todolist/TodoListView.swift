@@ -19,9 +19,37 @@ struct TodoListView: View {
     
     var body: some View {
         NavigationView {
+            
             VStack {
-                Text(todolistVM.currentList.listtitle)
+                EmptyView()
+                    .fullScreenCover(isPresented: $goSelectList, content: {
+                        SelectListView(doneSelectingList: {
+                            todolistVM.loadList()
+                        })
+                    })
+                EmptyView()
+                    .fullScreenCover(isPresented: $goLogin, content: {
+                        LoginView(userLoginOk: {
+                            goSelectList = true
+                        })
+                    })
                 
+                Text(todolistVM.currentList.listtitle)
+                    .navigationBarTitle("Lista")
+                    .navigationBarItems(leading: Button("Logout", action: {
+                        print("LETS SIGNOUT")
+                        do {
+                            try Auth.auth().signOut()
+                            UserDefaults.standard.removeObject(forKey: "currentListId")
+                            goLogin = true
+                            print("SIGNOUT OK")
+                        } catch {
+                            print("SIGNOUT FAIL")
+                        }
+                        print("SIGNOUT DONE")
+                    }), trailing: Button("B", action: {
+                        goLogin = true
+                    }))
                 /*
                 NavigationLink(
                     destination: LoginView(),
@@ -30,8 +58,11 @@ struct TodoListView: View {
                         EmptyView()
                     })
                 */
+                
                 NavigationLink(
-                    destination: SelectListView(),
+                    destination: SelectListView(doneSelectingList: {
+                            todolistVM.loadList()
+                    }),
                     label: {
                         Text("Välj lista")
                     })
@@ -57,13 +88,10 @@ struct TodoListView: View {
                         })
                     
                     
-                }
-            }.fullScreenCover(isPresented: $goLogin, content: {
-                LoginView()
-            })
-            .fullScreenCover(isPresented: $goSelectList, content: {
-                SelectListView()
-            })
+                }.listStyle(PlainListStyle())
+            }
+            
+            
         }.onAppear() {
             
             if(Auth.auth().currentUser == nil)

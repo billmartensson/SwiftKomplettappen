@@ -16,6 +16,8 @@ struct LoginView: View {
     
     @State var showError = false
     
+    var userLoginOk = {}
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -30,13 +32,15 @@ struct LoginView: View {
                 
                 
                 TextField("E-mail", text: $enteredEmail).padding()
+                    .keyboardType(.emailAddress)
                 
-                TextField("Password", text: $enteredPassword).padding()
+                SecureField("Password", text: $enteredPassword).padding()
                 
                 Button(action: {
                     Auth.auth().signIn(withEmail: enteredEmail, password: enteredPassword, completion: { loginresult, loginerror in
                         if(loginerror == nil)
                         {
+                            userLoginOk()
                             presentationMode.wrappedValue.dismiss()
                         } else {
                             showError = true
@@ -48,7 +52,7 @@ struct LoginView: View {
                 }.padding()
                 
                 NavigationLink(
-                    destination: SignupView(),
+                    destination: SignupView(loginPresentation: presentationMode, userLoginOk: userLoginOk),
                     label: {
                         Text("SIGNUP")
                     })
